@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteBase /StudiKasus/
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^home/?$ index.php?page=$1 [L]
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^grooming/?$ views/grooming/index.php?page=$1 [L]
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^reservasi/?$ views/reservasi/index.php?page=$1 [L]
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^kamar/?$ views/kamar/index.php?page=$1 [L]
+
+RewriteRule ^tambahGrooming/?$ views/grooming/tambah.php
+RewriteRule ^proses_tambahGrooming/?$ views/grooming/proses_tambah.php
+RewriteRule ^editGrooming/?$ views/grooming/edit.php
+RewriteRule ^hapusGrooming/?$ views/grooming/hapus.php
+
+RewriteRule ^tambahReservasi/?$ views/reservasi/tambah.php
+RewriteRule ^proses_tambahReservasi/?$ views/reservasi/proses_tambah.php
+RewriteRule ^editReservasi/?$ views/reservasi/edit.php
+RewriteRule ^hapusReservasi/?$ views/reservasi/hapus.php
+
+RewriteRule ^tambahKamar/?$ views/kamar/tambah.php
+RewriteRule ^proses_tambahKamar/?$ views/kamar/proses_tambah.php
+RewriteRule ^editKamar/?$ views/kamar/edit.php
+RewriteRule ^hapusKamar/?$ views/kamar/hapus.php
+
